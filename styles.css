@@ -18,15 +18,15 @@
 }
 
 /* 1. utilities
-     2. global styling
-     3. card stylings
-     6. link stylings
-     7. media queries
-     8. keyframes */
+   2. global styling
+   3. card stylings
+   6. link stylings
+   7. media queries
+   8. keyframes */
 
 /*========
-   utilities 
-  =========*/
+ utilities 
+=========*/
 
 .flex-group {
   display: flex;
@@ -36,12 +36,11 @@
 
 .grid-group {
   display: grid;
-  place-items: center;
 }
 
 /*=============
-   global styling 
-  ==============*/
+ global styling 
+==============*/
 
 body {
   background-color: var(--clr-white-200);
@@ -53,8 +52,8 @@ body {
 }
 
 /*===========
-   car stylings
-  ============*/
+ car stylings
+============*/
 
 .card-collection {
   border-radius: 10px;
@@ -95,8 +94,8 @@ body {
 }
 
 /*============
-   link stylings
-  =============*/
+ link stylings
+=============*/
 
 .card__link {
   display: inline-block;
@@ -126,8 +125,8 @@ body {
 }
 
 /*============ 
-   media queries
-  =============*/
+ media queries
+=============*/
 
 @media (min-width: 37.5em) {
   .grid-group {
@@ -142,8 +141,8 @@ body {
 }
 
 /*======== 
-   keyframes 
-  =========*/
+ keyframes 
+=========*/
 
 @keyframes fade-up {
   from {
