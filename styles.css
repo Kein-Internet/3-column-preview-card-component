@@ -49,6 +49,7 @@ body {
   color: var(--clr-white-200);
   line-height: var(--lh-400);
   padding: 3rem;
+  min-height: 100vsh;
 }
 
 /*===========
