@@ -1,0 +1,169 @@
+:root {
+  --clr-white-200: hsl(0, 0%, 95%);
+  --clr-white-100: hsl(0, 0%, 100%);
+
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-teal: hsl(184, 100%, 22%);
+  --clr-emerald: hsl(179, 100%, 13%);
+
+  --ff-big-shoulders: "Big Shoulders Display", sans-serif;
+  --ff-lexend: "Lexend Deca", sans-serif;
+
+  --fs-400: calc(15rem / 16);
+  --fs-500: calc(40rem / 16);
+
+  --fw-500: 500;
+
+  --lh-400: 1.67;
+}
+
+/* 1. utilities
+     2. global styling
+     3. card stylings
+     6. link stylings
+     7. media queries
+     8. keyframes */
+
+/*========
+   utilities 
+  =========*/
+
+.flex-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-group {
+  display: grid;
+}
+
+/*=============
+   global styling 
+  ==============*/
+
+body {
+  background-color: var(--clr-white-200);
+  font-family: var(--ff-lexend);
+  font-size: var(--fs-400);
+  color: var(--clr-white-200);
+  line-height: var(--lh-400);
+  padding: 3rem;
+}
+
+/*===========
+   car stylings
+  ============*/
+
+.card-collection {
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: calc(920rem / 16);
+  animation: fade-up 1s;
+}
+
+.card {
+  padding: 3rem;
+}
+
+.card__img-wrapper {
+  margin-bottom: 1rem;
+  animation: fade-left 0.9s;
+}
+
+.card__title {
+  font-family: var(--ff-big-shoulders);
+  font-size: var(--fs-500);
+  color: var(--clr-white-100);
+}
+
+.card__desc {
+  margin-block: calc(25rem / 16);
+}
+
+.one {
+  background-color: var(--clr-orange);
+}
+
+.two {
+  background-color: var(--clr-teal);
+}
+
+.three {
+  background-color: var(--clr-emerald);
+}
+
+/*============
+   link stylings
+  =============*/
+
+.card__link {
+  display: inline-block;
+  background-color: var(--clr-white-100);
+  border-radius: 100px;
+  border: calc(2em / 16) solid var(--clr-white-100);
+  text-decoration: none;
+  padding: calc(10em / 16) calc(29em / 16);
+}
+
+.card__link:hover {
+  background-color: transparent;
+  color: var(--clr-white-100);
+  transition: 0.3s;
+}
+
+.link-one {
+  color: var(--clr-orange);
+}
+
+.link-two {
+  color: var(--clr-teal);
+}
+
+.link-three {
+  color: var(--clr-emerald);
+}
+
+/*============ 
+   media queries
+  =============*/
+
+@media (min-width: 37.5em) {
+  .grid-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+}
+
+/*======== 
+   keyframes 
+  =========*/
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
